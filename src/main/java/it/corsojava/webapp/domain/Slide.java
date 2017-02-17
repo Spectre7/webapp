@@ -13,7 +13,7 @@ import javax.persistence.*;
 @NamedQuery(query="SELECT s FROM Slide s", name="slides")
 public class Slide implements Serializable {
 	
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String body;
